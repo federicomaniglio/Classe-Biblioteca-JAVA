@@ -13,7 +13,8 @@ public class Main {
             System.out.println("1. Aggiungi un nuovo libro");
             System.out.println("2. Cerca un libro per titolo");
             System.out.println("3. Visualizza tutti i libri disponibili");
-            System.out.println("4. Esci");
+            System.out.println("4. Cerca Online");
+            System.out.println("5. Esci");
             int scelta = scanner.nextInt();
             scanner.nextLine(); // Consumare il newline
             switch (scelta) {
@@ -39,8 +40,13 @@ public class Main {
                     System.out.println("Libri disponibili:");
                     System.out.println(biblioteca);
                     break;
-
                 case 4:
+                    System.out.println("Inserisci il titolo del libro che vuoi cercare online:");
+                    String titoloRicercaOnline = scanner.nextLine();
+                    System.out.println(biblioteca.cercaLibroOnline(titoloRicercaOnline));
+                    break;
+
+                case 5:
                     System.out.println("Uscita dal programma.");
                     return;
 
